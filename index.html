@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="timer.css">
+    <script src="timer.js" defer></script>
+    <title>Timer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="timer-box" data-timer-box>
+            <div class="top-bar">
+                <div></div>
+                <div class="cross-button">&cross;</div>
+            </div>
+            <div class="timer-display">
+                <input type="number" min="0" max="23" value="00" name="timer-input-hours" id="timer-input-hours">
+                <span class="colon">:</span>
+                <input type="number" min="0" max="59" value="00" name="timer-input-minutes" id="timer-input-minutes">
+                <span class="colon">:</span>
+                <input type="number" min="0" max="59" value="00" name="timer-input-seconds" id="timer-input-seconds">
+            </div>
+            <div class="timer-navigation">
+                <button class="reset-button" id="reset-button">Reset</button>
+                <button class="start-button" id="start-button">Start</button>
+            </div>
+            <div class="countdown-info">
+                <span>Countdown &nbsp;</span><span class="countdown-info-display"> 00:00:00</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

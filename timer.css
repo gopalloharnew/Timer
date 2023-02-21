@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.timer-box{
+    font-size: 16px;
+    font-family: monospace;
+    background-color: hsl(204, 10%, 90%);
+    border: 1em;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-bottom: 1em;
+    position: fixed;
+    --top: 0px;
+    --left: 0px;
+    top: var(--top);
+    left: var(--left);
+}
+
+.timer-box > *{
+    display: flex;
+    width: 100%;
+    padding-inline: 1em;
+}
+
+.timer-box *{
+    box-sizing: border-box;
+}
+
+/* top-bar */
+.top-bar{
+    justify-content: space-between;
+    --top-bar-height: 2em;
+    height: var(--top-bar-height);
+    padding: 0;
+    cursor: move;
+    position: relative;
+}
+
+.top-bar::after{
+    content: "";
+    display: block;
+    width: calc(100% -  (2 *var(--top-bar-height)));
+    height: 0.1em;
+    background-color: blueviolet;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cross-button{
+    width:  var(--top-bar-height);
+    height:  var(--top-bar-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.cross-button:hover{
+    background-color: hsl(0deg 100% 72%);
+}
+
+/* timer-display */
+
+
+.timer-display input{
+    font-size: 2em;
+    font-family: inherit;
+    width: 2em;
+    height: 1em;
+    padding: 0 0 0 0.25em;
+    line-height: 1rem;
+    margin: 0px;
+    appearance: none;
+    border: none;
+    border-radius: 0.2em;
+}
+
+.colon{
+    font-size: 2em;
+    display: block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    line-height: 1em;
+}
+
+/* timer-navigation */
+.timer-navigation{
+    justify-content: space-evenly;
+}
+
+.timer-navigation button{
+    font-size: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: hsl(0deg 100% 72%);
+    padding: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius:5px;
+    border: 1px solid transparent;
+} 
+.timer-navigation button:hover{
+ background-color: rgb(218, 49, 49);
+ border: 1px solid black;
+
+}
+
+
+/* countdown-info */
+.countdown-info{
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
